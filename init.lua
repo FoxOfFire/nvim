@@ -614,16 +614,8 @@ require('lazy').setup({
           },
         },
         rust_analyzer = {},
-        nextflow_ls = {
-          cmd = { 'java', '-jar', 'nextflow-language-server-all.jar' },
-          filetypes = { 'nextflow' },
-          settings = {
-            nextflow = {
-              files = {
-                exclude = { '.git', '.nf-test', 'work' },
-              },
-            },
-          },
+        java_language_server = {
+          filetypes = { 'java' },
         },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
