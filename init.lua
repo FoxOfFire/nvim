@@ -622,6 +622,10 @@ require('lazy').setup({
         -- *************************
         -- :help lspconfig-all
         -- *************************
+        pyright = {
+          cmd = { 'pyright-langserver', '--stdio' },
+          filetypes = { 'python' },
+        },
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
