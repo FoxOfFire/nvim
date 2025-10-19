@@ -94,7 +94,7 @@ vim.keymap.set('n', '<leader>wd', '<cmd>vertical resize -20<CR>', { desc = 'Resi
 vim.keymap.set('n', '<leader>ws', '<C-w><C-v>', { desc = '[S]plit window vertcally' })
 vim.keymap.set('n', '<leader>ww', '<C-w><C-v>:term\n<cmd>vertical resize -20<CR>', { desc = 'Open split small terminal' })
 vim.keymap.set('n', '<leader>wq', ':wall\n:qall\n', { desc = 'Save and [Q]uit nvim' })
-vim.keymap.set('n', '<leader>wr', ':wall\n:q\n', { desc = '[R]emove window' })
+vim.keymap.set('n', '<leader>wr', ':close\n', { desc = '[R]emove window' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
