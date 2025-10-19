@@ -87,8 +87,14 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>w', ':term\n')
-vim.keymap.set('n', '<leader>e', '<C-w><C-v>:term\n')
+vim.keymap.set('n', '<leader>wt', ':term\n', { desc = 'Open [T]erminal' })
+vim.keymap.set('n', '<leader>we', ':Ex\n', { desc = 'Open [E]xplorer' })
+vim.keymap.set('n', '<leader>wa', '<cmd>vertical resize +20<CR>', { desc = 'Resize window by +20' })
+vim.keymap.set('n', '<leader>wd', '<cmd>vertical resize -20<CR>', { desc = 'Resize window by -20' })
+vim.keymap.set('n', '<leader>ws', '<C-w><C-v>', { desc = '[S]plit window vertcally' })
+vim.keymap.set('n', '<leader>ww', '<C-w><C-v>:term\n<cmd>vertical resize -20<CR>', { desc = 'Open split small terminal' })
+vim.keymap.set('n', '<leader>wq', ':wall\n:qall\n', { desc = 'Save and [Q]uit nvim' })
+vim.keymap.set('n', '<leader>wr', ':wall\n:q\n', { desc = '[R]emove window' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
