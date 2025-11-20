@@ -611,6 +611,11 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         mypy = {},
+        pylsp = {
+          cmd = { 'pylsp' },
+          filetypes = { 'python' },
+          root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile', '.git' },
+        },
         flake8 = {},
         gopls = {
           cmd = { 'gopls' },
