@@ -166,7 +166,7 @@ rtp:prepend(lazypath)
 local function get_python_path(workspace)
   -- Use activated virtualenv
   if vim.env.VIRTUAL_ENV then
-    return vim.env.VIRTUAL_ENV .. '/venv/bin/python'
+    return vim.env.VIRTUAL_ENV .. '/.venv/bin/python'
   end
   -- Fallback to system Python
   return 'python'
@@ -611,11 +611,6 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         mypy = {},
-        pylsp = {
-          cmd = { 'pylsp' },
-          filetypes = { 'python' },
-          root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile', '.git' },
-        },
         flake8 = {},
         gopls = {
           cmd = { 'gopls' },
