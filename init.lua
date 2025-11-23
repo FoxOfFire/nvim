@@ -611,6 +611,7 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         mypy = {},
+        pylsp = {},
         flake8 = {},
         gopls = {
           cmd = { 'gopls' },
