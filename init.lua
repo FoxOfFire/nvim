@@ -93,7 +93,12 @@ vim.keymap.set('n', '<leader>wa', '<cmd>vertical resize +20<CR>', { desc = 'Resi
 vim.keymap.set('n', '<leader>wd', '<cmd>vertical resize -20<CR>', { desc = 'Resize window by -20' })
 vim.keymap.set('n', '<leader>ws', '<C-w><C-v><cmd>vertical resize -20<CR>', { desc = '[S]plit window vertcally' })
 vim.keymap.set('n', '<leader>wh', '<C-w><C-s><cmd>horizontal resize -11<CR>', { desc = '[H]orizontally split window' })
-vim.keymap.set('n', '<leader>ww', '<C-w><C-v><cmd>term<CR><cmd>vertical resize -20<CR>', { desc = 'Open split small terminal' })
+vim.keymap.set(
+  'n',
+  '<leader>ww',
+  '<C-w><C-v><cmd>vertical resize -20<CR><C-w><C-s><cmd>horizontal resize -11<CR><cmd>term<CR>',
+  { desc = 'Open split small terminal' }
+)
 vim.keymap.set('n', '<leader>wq', '<cmd>wall<CR><cmd>qall<CR>', { desc = 'Save and [Q]uit nvim' })
 vim.keymap.set('n', '<leader>wr', '<cmd>close<CR>', { desc = '[R]emove window' })
 -- Diagnostic keymaps
