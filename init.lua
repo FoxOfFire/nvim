@@ -89,6 +89,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>wt', '<cmd>term<CR>', { desc = 'Open [T]erminal' })
 vim.keymap.set('n', '<leader>we', '<cmd>Ex<CR>', { desc = 'Open [E]xplorer' })
+vim.keymap.set('n', '<leader>we', '<cmd>black .<CR>', { desc = 'Format files with [B]lack' })
 vim.keymap.set('n', '<leader>wa', '<cmd>vertical resize +20<CR>', { desc = 'Resize window by +20' })
 vim.keymap.set('n', '<leader>wd', '<cmd>vertical resize -20<CR>', { desc = 'Resize window by -20' })
 vim.keymap.set('n', '<leader>ws', '<C-w><C-v><cmd>vertical resize -20<CR>', { desc = '[S]plit window vertcally' })
