@@ -169,16 +169,6 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
--- prefer python venv over normal ye
-local function get_python_path(workspace)
-  -- Use activated virtualenv
-  if vim.env.VIRTUAL_ENV then
-    return vim.env.VIRTUAL_ENV .. '/.venv/bin/python'
-  end
-  -- Fallback to system Python
-  return 'python'
-end
-
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
